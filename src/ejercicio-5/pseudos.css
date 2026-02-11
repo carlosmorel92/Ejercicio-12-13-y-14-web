@@ -1,0 +1,88 @@
+/* --- Enlaces del menú --- */
+nav a:hover {
+    background-color: #333;
+    color: white;
+}
+
+nav a:active {
+    transform: scale(0.95);
+}
+
+nav a:visited {
+    color: purple;
+}
+
+/* Separador entre enlaces */
+nav a:not(:last-child)::after {
+    content: " | ";
+    margin: 0 5px;
+}
+
+/* --- Formulario --- */
+input:focus, textarea:focus {
+    border: 2px solid blue;
+    box-shadow: 0 0 5px blue;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Cambiar placeholder al enfocar */
+input:focus::placeholder {
+    color: blue;
+    font-style: italic;
+}
+
+/* --- Lista --- */
+ul li:first-child {
+    background-color: #ffd;
+}
+
+ul li:last-child {
+    background-color: #dfd;
+}
+
+ul li:nth-child(odd) {
+    color: blue;
+}
+
+ul li:nth-child(even) {
+    color: green;
+}
+
+/* Hover con before */
+ul li::before {
+    content: "• ";
+}
+
+ul li:hover::before {
+    content: "👉 ";
+}
+
+/* --- Artículos --- */
+article::before {
+    content: "📌 ";
+}
+
+article h3::after {
+    content: " ✨";
+}
+
+article:not(:first-child) {
+    margin-top: 20px;
+}
+
+/* --- Párrafo largo --- */
+.parrafo-largo::first-line {
+    font-weight: bold;
+}
+
+.parrafo-largo::first-letter {
+    font-size: 28px;
+    color: red;
+}

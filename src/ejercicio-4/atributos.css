@@ -1,0 +1,63 @@
+/* Inputs generales con atributo type */
+[type] {
+    border: 1px solid #ccc;
+}
+
+/* Tipos específicos */
+[type="text"] {
+    background-color: #ffffcc;
+}
+
+[type="email"] {
+    background-color: #cce5ff;
+}
+
+[type="password"] {
+    background-color: #ffccdd;
+}
+
+[type="submit"] {
+    background-color: #ccffcc;
+    cursor: pointer;
+}
+
+/* Enlaces */
+[href^="https"] {
+    color: green;
+    font-weight: bold;
+}
+
+[href^="mailto"] {
+    color: orange;
+    text-decoration: underline;
+}
+
+[href^="#"] {
+    color: purple;
+    font-style: italic;
+}
+
+/* Imágenes */
+[src$=".jpg"] {
+    border: 3px solid gold;
+}
+
+[src$=".png"] {
+    border: 3px solid silver;
+}
+
+/* data-* atributos */
+[data-color="rojo"] {
+    color: red;
+    font-size: 18px;
+}
+
+[data-color="azul"] {
+    color: blue;
+    font-size: 18px;
+}
+
+[data-tipo*="especial"] {
+    background-color: yellow;
+    padding: 10px;
+}

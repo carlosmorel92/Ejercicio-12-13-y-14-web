@@ -1,0 +1,100 @@
+/* --- Agrupación --- */
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+}
+
+.hero-section, .content-section {
+    padding: 20px;
+}
+
+a:hover, button:hover {
+    opacity: 0.8;
+}
+
+input, textarea, select {
+    border: 1px solid #ccc;
+}
+
+/* --- Descendientes e hijo directo --- */
+header nav {
+    background: #eee;
+}
+
+header > h1 {
+    color: blue;
+}
+
+.content-section article {
+    border: 1px solid black;
+}
+
+.sidebar > ul {
+    margin-bottom: 10px;
+}
+
+.social-links > li > a {
+    color: green;
+}
+
+/* --- Hermanos --- */
+.hero-title + .hero-description {
+    font-style: italic;
+}
+
+.article-title + p {
+    color: red;
+}
+
+p + p {
+    background: #f0f0f0;
+}
+
+.categories ~ .tags {
+    border-top: 2px solid black;
+}
+
+h2 ~ * {
+    margin-top: 10px;
+}
+
+/* --- Selectores complejos --- */
+.featured-article.highlight {
+    background: #ffffcc;
+}
+
+nav ul li:first-child + li {
+    color: purple;
+}
+
+input[type="text"][required] {
+    border: 2px solid red;
+}
+
+.sidebar ul:nth-child(odd) li {
+    background: #f9f9f9;
+}
+
+article > h3 + p::first-line {
+    font-weight: bold;
+}
+
+/* --- Pseudoclases combinadas --- */
+nav li:first-child a {
+    font-weight: bold;
+}
+
+nav li:last-child a {
+    text-decoration: underline;
+}
+
+.categories li:nth-child(even) {
+    color: blue;
+}
+
+p:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+article:hover .article-title {
+    color: darkorange;
+}
