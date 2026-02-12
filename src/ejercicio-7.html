@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7 - Especificidad y Herencia</title>
+    <link rel="stylesheet" href="css/ejercicio-7.css">
+</head>
+<body>
+
+<div id="container" class="main-wrapper">
+
+    <header class="site-header">
+        <h1 id="main-title" class="primary-heading">Título Principal</h1>
+        <p class="tagline" style="color: red;">Este es el eslogan del sitio</p>
+    </header>
+
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li><a href="#" class="nav-link active">Inicio</a></li>
+            <li><a href="#" class="nav-link" id="special-link">Servicios</a></li>
+            <li><a href="#" class="nav-link">Blog</a></li>
+            <li><a href="#" class="nav-link">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="content-area">
+        <article id="main-article" class="article featured">
+            <h2 class="article-title">Artículo Principal</h2>
+            <p class="article-text">Primer párrafo del artículo.</p>
+            <p class="article-text" id="highlighted-paragraph">
+                Segundo párrafo destacado.
+            </p>
+            <p class="article-text">Tercer párrafo del artículo.</p>
+            <img src="imagen.jpg" class="article-image" alt="Imagen">
+        </article>
+    </section>
+
+    <aside class="sidebar">
+        <h3 class="sidebar-title">Barra lateral</h3>
+        <ul class="sidebar-list">
+            <li class="sidebar-item">Elemento 1</li>
+            <li class="sidebar-item">Elemento 2</li>
+            <li class="sidebar-item">Elemento 3</li>
+        </ul>
+    </aside>
+
+    <footer class="site-footer">
+        <p class="copyright">© 2026 Mi Sitio Web</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

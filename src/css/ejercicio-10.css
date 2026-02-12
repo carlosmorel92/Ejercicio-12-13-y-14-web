@@ -1,0 +1,164 @@
+/* =========================
+   ESTILOS BASE
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #f8f9fa;
+    padding: 30px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+/* =========================
+   FLEX BASE
+========================= */
+
+/*
+Main axis: eje principal (depende de flex-direction)
+Cross axis: eje perpendicular
+*/
+
+.flex-container {
+    display: flex;
+    background: #e9ecef;
+    padding: 20px;
+    margin: 15px 0;
+    min-height: 100px;
+    gap: 10px;
+}
+
+.flex-item {
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.flex-item:hover {
+    background: #0056b3;
+}
+
+/* =========================
+   DIRECCIONES
+========================= */
+
+.row-demo { flex-direction: row; }
+.row-reverse-demo { flex-direction: row-reverse; }
+.column-demo { flex-direction: column; height: 300px; }
+.column-reverse-demo { flex-direction: column-reverse; height: 300px; }
+
+/* =========================
+   WRAP
+========================= */
+
+.nowrap-demo { flex-wrap: nowrap; width: 400px; }
+.wrap-demo { flex-wrap: wrap; width: 400px; }
+.wrap-reverse-demo { flex-wrap: wrap-reverse; width: 400px; }
+
+/* =========================
+   JUSTIFY CONTENT
+========================= */
+
+/*
+Distribuye elementos en el main axis
+*/
+
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+
+/* =========================
+   ALIGN ITEMS
+========================= */
+
+/*
+Alinea en el cross axis
+*/
+
+.align-stretch { align-items: stretch; height: 200px; }
+.align-start { align-items: flex-start; height: 200px; }
+.align-end { align-items: flex-end; height: 200px; }
+.align-center { align-items: center; height: 200px; }
+.align-baseline { align-items: baseline; height: 200px; }
+
+/* =========================
+   FLEX ITEMS
+========================= */
+
+/*
+flex-grow: cuánto crece
+flex-shrink: cuánto se reduce
+flex-basis: tamaño base inicial
+*/
+
+.grow-1 { flex-grow: 1; }
+.grow-2 { flex-grow: 2; }
+.shrink-0 { flex-shrink: 0; width: 200px; }
+.flex-basis-demo { flex-basis: 150px; }
+.flex-auto { flex: auto; }
+
+/* =========================
+   ALIGN SELF
+========================= */
+
+.align-self-start { align-self: flex-start; }
+.align-self-end { align-self: flex-end; }
+.align-self-center { align-self: center; }
+.align-self-stretch { align-self: stretch; }
+.align-self-baseline { align-self: baseline; }
+
+/* =========================
+   ORDER
+========================= */
+
+.order-1 { order: 5; }
+.order-2 { order: 1; }
+.order-3 { order: 4; }
+.order-4 { order: 2; }
+.order-5 { order: 3; }
+
+/* =========================
+   LAYOUTS PRÁCTICOS
+========================= */
+
+.header-layout {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.cards-layout {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.cards-layout .flex-item {
+    flex: 1 1 200px;
+}
+
+.centered-layout {
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}

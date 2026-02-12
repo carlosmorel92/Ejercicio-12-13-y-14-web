@@ -1,0 +1,224 @@
+/* =========================
+   ESTILOS BASE
+========================= */
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: #f9f9f9;
+    padding: 30px;
+}
+
+.basic-types,
+.marker-styles,
+.marker-position,
+.custom-images,
+.custom-counters,
+.horizontal-lists,
+.nested-lists {
+    margin-bottom: 40px;
+}
+
+/* =========================
+   TIPOS BÁSICOS
+========================= */
+
+.unordered-default {
+    padding-left: 30px;
+}
+
+.ordered-default {
+    color: #2980b9;
+}
+
+.description-list dt {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.description-list dd {
+    margin-left: 20px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   ESTILOS DE MARCADORES
+========================= */
+
+.circle-markers { list-style-type: circle; color: #e74c3c; }
+.square-markers { list-style-type: square; color: #3498db; }
+.no-markers { list-style-type: none; padding-left: 0; }
+.roman-numbers { list-style-type: upper-roman; color: #8e44ad; }
+.alpha-letters { list-style-type: lower-alpha; color: #f39c12; }
+.leading-zero { list-style-type: decimal-leading-zero; color: #27ae60; }
+
+/* =========================
+   POSICIÓN
+========================= */
+
+/*
+outside:
+El marcador queda fuera del bloque de texto.
+inside:
+El marcador forma parte del bloque y afecta el flujo.
+*/
+
+.outside-markers {
+    list-style-position: outside;
+    background: #ecf0f1;
+    padding: 15px;
+}
+
+.inside-markers {
+    list-style-position: inside;
+    background: #d5dbdb;
+    padding: 15px;
+}
+
+/* =========================
+   IMÁGENES PERSONALIZADAS
+========================= */
+
+.star-markers,
+.arrow-markers {
+    list-style: none;
+    padding-left: 0;
+}
+
+.star-markers li::before {
+    content: "⭐ ";
+}
+
+.arrow-markers li::before {
+    content: "➜ ";
+}
+
+/* =========================
+   CONTADORES CSS
+========================= */
+
+/*
+counter-reset inicia contador
+counter-increment suma 1
+counter() imprime valor
+*/
+
+.section-counter {
+    counter-reset: section-counter;
+    list-style: none;
+    padding-left: 0;
+}
+
+.section-counter li {
+    counter-increment: section-counter;
+}
+
+.section-counter li::before {
+    content: "Sección " counter(section-counter) ": ";
+    font-weight: bold;
+}
+
+.chapter-counter {
+    counter-reset: chapter-counter;
+    list-style: none;
+    padding-left: 0;
+}
+
+.chapter-counter li {
+    counter-increment: chapter-counter;
+}
+
+.chapter-counter li::before {
+    content: "Capítulo " counter(chapter-counter, upper-roman) " - ";
+    font-weight: bold;
+}
+
+/* =========================
+   LISTAS HORIZONTALES
+========================= */
+
+/*
+Se usa flexbox para alinearlas horizontalmente
+*/
+
+.horizontal-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.horizontal-menu li {
+    margin-right: 20px;
+}
+
+.horizontal-menu a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background: #34495e;
+    color: white;
+    transition: 0.3s;
+}
+
+.horizontal-menu a:hover {
+    background: #2c3e50;
+}
+
+.horizontal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+}
+
+.horizontal-tags li {
+    background: #ecf0f1;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+/* =========================
+   LISTAS ANIDADAS
+========================= */
+
+.multilevel-list {
+    color: #2c3e50;
+}
+
+.multilevel-list > li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.multilevel-list ul {
+    margin-top: 5px;
+    list-style-type: circle;
+}
+
+.multilevel-list li li {
+    font-weight: normal;
+    color: #7f8c8d;
+}
+
+.multilevel-list ul ul {
+    list-style-type: square;
+    color: #95a5a6;
+}
+
+/* =========================
+   EFECTOS
+========================= */
+
+li:hover {
+    color: #c0392b;
+    transition: 0.3s;
+}

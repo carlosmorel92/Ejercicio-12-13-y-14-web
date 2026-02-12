@@ -1,0 +1,144 @@
+/* ===========================
+   HERENCIA CSS
+   =========================== */
+
+/* Se heredan: font-family, color, line-height */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* font-size se hereda */
+#container {
+    font-size: 16px;
+}
+
+/* text-align se hereda */
+.site-header {
+    text-align: center;
+}
+
+/* color se hereda a los párrafos */
+.content-area {
+    color: #555;
+}
+
+/* ===========================
+   ESPECIFICIDAD
+   =========================== */
+
+/* ---- Elementos (0,0,0,1) ---- */
+p { margin-bottom: 15px; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.2em; }
+
+/* ---- Clases (0,0,1,0) ---- */
+.primary-heading { color: blue; }
+.article-text { color: green; }
+.nav-link { color: purple; text-decoration: none; }
+.sidebar-item { background-color: #f0f0f0; }
+
+/* ---- IDs (0,1,0,0) ---- */
+#main-title { color: red; } /* Gana sobre .primary-heading */
+#special-link { font-weight: bold; }
+#highlighted-paragraph { background-color: yellow; }
+
+/* ---- Múltiples clases (0,0,2,0) ---- */
+.article.featured {
+    border: 2px solid gold;
+}
+
+.nav-link.active {
+    color: orange;
+    font-weight: bold;
+}
+
+/* ---- Combinadores complejos ---- */
+
+/* (0,0,2,0) */
+.content-area .article-text {
+    font-style: italic;
+}
+
+/* (0,1,1,0) */
+#main-article .article-title {
+    color: darkblue;
+}
+
+/* (0,0,2,0) */
+.site-header .primary-heading {
+    text-shadow: 1px 1px 2px gray;
+}
+
+/* ===========================
+   CASCADA (Orden importa)
+   =========================== */
+
+/* Primera regla */
+.tagline { color: blue; }
+
+/* Segunda regla - GANA */
+.tagline { color: green; }
+
+/* ===========================
+   !IMPORTANT
+   =========================== */
+
+.copyright {
+    color: gray !important;
+}
+
+.sidebar-title {
+    color: black !important;
+}
+
+/* ===========================
+   PALABRAS CLAVE ESPECIALES
+   =========================== */
+
+.article-image {
+    display: inherit; /* hereda display del padre */
+}
+
+.nav-list {
+    list-style: initial; /* valor por defecto navegador */
+}
+
+.reset-margin {
+    margin: unset;
+}
+
+.browser-default {
+    all: revert;
+}
+
+/* ===========================
+   CONFLICTOS DE ESPECIFICIDAD
+   =========================== */
+
+/* Esta regla compite con .article-text */
+p.article-text {
+    color: brown;
+}
+
+/* Esta compite con .nav-link */
+nav a {
+    color: teal;
+}
+
+/* Ejemplo hover */
+.nav-link:hover {
+    color: pink;
+}
+
+/*
+NOTAS IMPORTANTES:
+
+- Las propiedades heredables: color, font-family, line-height.
+- No heredables: margin, padding, border.
+- Los IDs siempre ganan sobre clases.
+- Las clases ganan sobre elementos.
+- !important solo debe usarse cuando es estrictamente necesario.
+*/
